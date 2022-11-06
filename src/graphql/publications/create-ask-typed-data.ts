@@ -1,13 +1,13 @@
 import { gql } from '@apollo/client'
 
-const CREATE_POST_SIG = gql`
-	mutation CreatePostTypedData($request: CreatePublicPostRequest!) {
-		createPostTypedData(request: $request) {
+const CREATE_ASK_SIG = gql`
+	mutation CreateAskTypedData($request: CreatePublicAskRequest!) {
+		createAskTypedData(request: $request) {
 			id
 			expiresAt
 			typedData {
 				types {
-					PostWithSig {
+					AskWithSig {
 						name
 						type
 					}
@@ -33,4 +33,4 @@ const CREATE_POST_SIG = gql`
 	}
 `
 
-export default CREATE_POST_SIG
+export default CREATE_ASK_SIG

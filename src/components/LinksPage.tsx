@@ -46,12 +46,12 @@ const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria = 'TOP_MI
 			<div className="flex md:hidden items-center space-x-4">
 				<HeaderLink href="/">Trending</HeaderLink>
 				<HeaderLink href="/newest">Newest</HeaderLink>
-				<HeaderLink href="/create">Create</HeaderLink>
+				<HeaderLink href="/create">Ask</HeaderLink>
 			</div>
 			{!loading && !error && links?.length == 0 && (
 				<div className="flex items-center justify-center pt-12">
 					<p className="text-white/60">
-						No links yet!{' '}
+						No questions yet!{' '}
 						<Link href="/create">
 							<a className="underline">Wanna be the first?</a>
 						</Link>

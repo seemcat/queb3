@@ -472,18 +472,18 @@ export type CreateMirrorRequest = {
 }
 
 /** The broadcast item */
-export type CreatePostBroadcastItemResult = {
-	__typename?: 'CreatePostBroadcastItemResult'
+export type CreateAskBroadcastItemResult = {
+	__typename?: 'CreateAskBroadcastItemResult'
 	/** The date the broadcast item expiries */
 	expiresAt: Scalars['DateTime']
 	/** This broadcast item ID */
 	id: Scalars['BroadcastId']
 	/** The typed data */
-	typedData: CreatePostEip712TypedData
+	typedData: AskPostEip712TypedData
 }
 
 /** The create post eip 712 typed data */
-export type CreatePostEip712TypedData = {
+export type AskPostEip712TypedData = {
 	__typename?: 'CreatePostEIP712TypedData'
 	/** The typed data domain */
 	domain: Eip712TypedDataDomain
@@ -1371,7 +1371,7 @@ export type Mutation = {
 	createCommentTypedData: CreateCommentBroadcastItemResult
 	createFollowTypedData: CreateFollowBroadcastItemResult
 	createMirrorTypedData: CreateMirrorBroadcastItemResult
-	createPostTypedData: CreatePostBroadcastItemResult
+	createAskTypedData: CreateAskBroadcastItemResult
 	createProfile: RelayResult
 	createSetDefaultProfileTypedData: SetDefaultProfileBroadcastItemResult
 	createSetDispatcherTypedData: CreateSetDispatcherBroadcastItemResult
@@ -1432,7 +1432,7 @@ export type MutationCreateMirrorTypedDataArgs = {
 	request: CreateMirrorRequest
 }
 
-export type MutationCreatePostTypedDataArgs = {
+export type MutationCreateAskTypedDataArgs = {
 	options?: InputMaybe<TypedDataOptions>
 	request: CreatePublicPostRequest
 }

@@ -8,9 +8,8 @@ import { Toaster } from 'react-hot-toast'
 
 const Layout = ({ children }) => {
 	const meta = {
-		title: `Refract: Top Links in Crypto`,
+		title: `A better Quora`,
 		description: `Your crypto-friendly link board. Discover new projects, highlight interesting articles, and share new ideas. Curated by the community.`,
-		image: `https://refract.withlens.app${cardImage.src}`,
 	}
 
 	return (
